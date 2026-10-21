@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The app handles its own pages, so every path loads it.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
